@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tarea Lab 08 - Gestor de Tareas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 0 10px;
+      }
+      section {
+        border: 1px solid #ccc;
+        padding: 16px;
+        border-radius: 8px;
+        background: #f9f9f9;
+      }
+      .form-group {
+        margin-bottom: 12px;
+      }
+      input[type="text"] {
+        width: 70%;
+        padding: 8px;
+        margin-right: 8px;
+      }
+      button {
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        background: white;
+        margin-bottom: 4px;
+      }
+      .completada {
+        text-decoration: line-through;
+        color: #7f8c8d;
+      }
+      .error {
+        color: #c0392b;
+        font-weight: bold;
+        margin-top: 8px;
+      }
+      .btn-borrar {
+        background: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 4px 8px;
+      }
+      .btn-completar {
+        background: #2ecc71;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 4px 8px;
+        margin-right: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gestor de Tareas Académicas</h1>
+
+    <section>
+      <form id="formTarea">
+        <div class="form-group">
+          <input
+            id="inputTitulo"
+            type="text"
+            placeholder="Escribe el título de la tarea..."
+          />
+          <button type="submit">Agregar Tarea</button>
+        </div>
+      </form>
+      <p id="msgError" class="error"></p>
+
+      <h3>Filtro e Interacción</h3>
+      <p>
+        Buscar en tiempo real:
+        <input id="inputBuscar" type="text" placeholder="Filtrar tareas..." />
+      </p>
+
+      <h3>Lista de Tareas</h3>
+      <ul id="listaTareas"></ul>
+
+      <p>
+        Resumen: Total <strong id="totalTareas">0</strong> | Pendientes:
+        <strong id="pendientesTareas">0</strong>
+      </p>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
